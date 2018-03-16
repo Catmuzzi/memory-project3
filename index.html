@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Memory!</title>
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/memorystyle.css">
+  <script src="js/script.js"></script>
+</head>
+
+<body onload="newBoard()">
+  <main class="container">
+    <header class="flex-container header">
+      <h1 class="header_name">Test your Memory</h1>
+    </header>
+
+    <!-- score panel: star rating, timer, moves-->
+    <section class="score-panel">
+      <ul class="stars">
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul>
+
+      <!--**********************move counter**************************************-->
+
+      <span class="moves"><a id="clicks">0</a> Moves</span>
+
+      <!--*********************timer counter************************************-->
+
+      <span class="timer" id="seconds">Timer begins when the disks are clicked.</span>
+
+      <!--*********************restart/refresh button****************************-->
+
+      <div class="restart">
+        <i class="fa fa-repeat" onclick="startOver()"></i>
+      </div>
+
+    </section>
+
+    <!--*****************memory board**************************************-->
+    <div id="memory_board" class="featured__next__image" onClick="onClick(); myTimer = setInterval(myCounter, 1000); ratingFunction();"></div>
+
+  </main>
+</body>
+
+</html>
